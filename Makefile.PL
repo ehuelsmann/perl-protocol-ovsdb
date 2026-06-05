@@ -9,12 +9,12 @@ WriteMakefile(
         "meta-spec"      => { version => 2 },
         resources        => {
             bugtracker      => {
-                web            => 'https://github.com/ehuelsmann/perl-protocol-sys-virt/issues',
+                web            => 'https://github.com/ehuelsmann/perl-protocol-ovsdb/issues',
             },
             repository      => {
                 type           => 'git',
-                url            => 'git://github.com/ehuelsmann/perl-protocol-sys-virt.git',
-                web            => 'https://github.com/ehuelsmann/perl-protocol-sys-virt',
+                url            => 'git://github.com/ehuelsmann/perl-protocol-ovsdb.git',
+                web            => 'https://github.com/ehuelsmann/perl-protocol-ovsdb',
             },
         },
     },
