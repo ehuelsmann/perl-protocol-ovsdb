@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+
+build/patch-version $1
+perl Makefile.PL
+make manifest
+make dist
