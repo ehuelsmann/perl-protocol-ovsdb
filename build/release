@@ -1,14 +1,24 @@
 #!/usr/bin/bash
 
-set +xeuo pipefail
+set -euo pipefail
 
 if [ -n "$(git status -s)" ]
 then
-    echo "Tree is not clean"
+    echo "ERROR: Tree is not clean"
     exit 1
 fi
+
+set -x
 build/patch-version $1
 perl Makefile.PL
 make manifest
 make dist
 git tag $1
+
+set +x
+cat <<'EOF'
+
+Release created succesfully
+
+run 'git checkout lib' to undo changes made by the release process
+EOF
