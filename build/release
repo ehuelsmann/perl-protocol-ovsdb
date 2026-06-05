@@ -18,7 +18,7 @@ git tag $1
 set +x
 cat <<'EOF'
 
-Release created succesfully
+DONE: Release created succesfully
 
 run 'git checkout lib' to undo changes made by the release process
 EOF
