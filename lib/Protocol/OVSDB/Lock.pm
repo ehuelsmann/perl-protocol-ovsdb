@@ -6,7 +6,7 @@ class Protocol::OVSDB::Lock;
 
 =head1 NAME
 
-Protocol::OVSDB::Lock - A lock in an Open vSwitch database
+Protocol::OVSDB::Lock - A lock in an Open vSwitch database server
 
 =head1 SYNOPSIS
 
