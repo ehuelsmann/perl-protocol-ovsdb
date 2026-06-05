@@ -61,16 +61,25 @@ field $_locked = false;
 # event callbacks
 field $_on_update :param(on_update) = sub {};
 
-
-method id() {
-    $_id;
-}
-
 method _set_conn($conn) {
     $_conn = $conn;
     weaken $_conn;
 }
 
+
+=head1 METHODS
+
+=head2 id
+
+  $lock->id
+
+Accessor for the C<id> field.
+
+=cut
+
+method id() {
+    $_id;
+}
 
 =head2 reset
 
@@ -137,7 +146,12 @@ method notify( $locked, $reason ) {
     $_on_update->( $locked, $reason );
 }
 
+=head1 DESTRUCTORS
+
 =head2 DESTROY
+
+Called by Perl when the lock goes out of scope. If the lock is still
+held, this releases the lock.
 
 =cut
 
@@ -158,7 +172,7 @@ method DESTROY() {
 
 =head1 SEE ALSO
 
-L<RFC 7047|https://www.rfc-editor.org/rfc/rfc7047.html>
+L<Protocol::OVSDB>, L<RFC 7047|https://www.rfc-editor.org/rfc/rfc7047.html>
 
 =head1 LICENSE AND COPYRIGHT
 

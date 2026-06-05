@@ -106,7 +106,12 @@ method notify( $updates ) {
     $_on_update->( $updates );
 }
 
+=head1 DESTRUCTORS
+
 =head2 DESTROY
+
+Called by Perl internally when the monitor goes out of scope. If the
+monitor is still active, this cancels the monitor.
 
 =cut
 
@@ -127,7 +132,7 @@ method DESTROY() {
 
 =head1 SEE ALSO
 
-L<RFC 7047|https://www.rfc-editor.org/rfc/rfc7047.html>
+L<Protocol::OVSDB>, L<RFC 7047|https://www.rfc-editor.org/rfc/rfc7047.html>
 
 =head1 LICENSE AND COPYRIGHT
 
