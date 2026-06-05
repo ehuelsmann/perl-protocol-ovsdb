@@ -1,0 +1,19 @@
+# avoid MakeMaker files
+^MANIFEST\.SKIP$
+^Makefile$
+^MYMETA\.
+
+# Don't include backup files
+~$
+\.rej$
+\.orig$
+\.bak$
+
+# Don't include temporary artifacts
+^test
+
+# Don't include build helpers
+^build/
+
+# Don't include build artifacts
+^Protocol-OVSDB
