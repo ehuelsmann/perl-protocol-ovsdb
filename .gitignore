@@ -2,4 +2,6 @@
 *.bak
 MYMETA*
 Makefile
-
+/*.pl
+/.*
+Protocol-OVSDB-*
