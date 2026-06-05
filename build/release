@@ -2,6 +2,9 @@
 
 set -euo pipefail
 
+PERL5LIB="./.devel/lib/perl5${PERL5LIB:+:$PERL5LIB}"
+export PERL5LIB
+
 if [ -n "$(git status -s)" ]
 then
     echo "ERROR: Tree is not clean"
