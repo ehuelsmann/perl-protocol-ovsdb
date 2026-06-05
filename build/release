@@ -1,6 +1,14 @@
 #!/usr/bin/bash
 
+set +xeuo pipefail
+
+if [ -n "$(git status -s)" ]
+then
+    echo "Tree is not clean"
+    exit 1
+fi
 build/patch-version $1
 perl Makefile.PL
 make manifest
 make dist
+git tag $1

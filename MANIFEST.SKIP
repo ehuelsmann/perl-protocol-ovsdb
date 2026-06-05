@@ -3,6 +3,9 @@
 ^Makefile$
 ^MYMETA\.
 
+# Don't include toplevel hidden paths
+^\.
+
 # Don't include backup files
 ~$
 \.rej$
