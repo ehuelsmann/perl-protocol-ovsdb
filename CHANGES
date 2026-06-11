@@ -1,4 +1,9 @@
 
+v0.99.1    to be released
+   [Changed]
+      * Reversed ownership: monitors and locks own hard references
+        to the main connection class; the main connection class
+        weak-references the monitors and locks.
 
 v0.99.0     2026-06-05
    Initial release

@@ -49,7 +49,7 @@ content.
 
 =cut
 
-use builtin qw( true false weaken );
+use builtin qw( true false );
 no warnings qw( experimental::builtin );
 
 
@@ -63,7 +63,6 @@ field $_on_update :param(on_update) = sub {};
 
 method _set_conn($conn) {
     $_conn = $conn;
-    weaken $_conn;
 }
 
 

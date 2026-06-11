@@ -47,9 +47,6 @@ content.
 
 =cut
 
-use builtin qw( weaken );
-no warnings qw( experimental::builtin );
-
 
 my $next_id = 1;
 
@@ -65,7 +62,6 @@ method id() {
 
 method _set_conn($conn) {
     $_conn = $conn;
-    weaken $_conn;
 }
 
 
